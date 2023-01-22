@@ -17,10 +17,17 @@ describe("ToDoItem", () => {
         expect(toDoItem).toBeDefined();
         expect(toDoItem).toBeInstanceOf(ToDoItem);
     })
-    // test("", () => {
-    //     let result = functionNameHere();
-    //     expect(result).toBe();
-    // })
+    test("can set & get title", () => {
+        const toDoItem = new ToDoItem();
+        const title = "a title";
+        toDoItem.setTitle(title);
+        expect(toDoItem.getTitle()).toBe(title);
+    })
+    test("constructor can set title", () => {
+        const title = "a title";
+        const toDoItem = new ToDoItem(title);
+        expect(toDoItem.getTitle()).toBe(title);
+    })
     // test("", () => {
     //     let result = functionNameHere();
     //     expect(result).toBe();
