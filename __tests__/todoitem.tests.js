@@ -28,6 +28,26 @@ describe("ToDoItem", () => {
         const toDoItem = new ToDoItem(title);
         expect(toDoItem.getTitle()).toBe(title);
     })
+    test("can set & get description", () => {
+        const toDoItem = new ToDoItem();
+        const description = "a description";
+        toDoItem.setDescription(description);
+        expect(toDoItem.getDescription()).toBe(description);
+    })
+    test("constructor can set description", () => {
+        const description = "a description";
+        const title = "a title";
+        const toDoItem = new ToDoItem(title, description);
+        expect(toDoItem.getDescription()).toBe(description);
+    })
+
+
+
+
+
+
+
+
     // test("", () => {
     //     let result = functionNameHere();
     //     expect(result).toBe();
