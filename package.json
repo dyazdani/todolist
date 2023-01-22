@@ -1,0 +1,22 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "Todo List OOP project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyazdani/todolist.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/dyazdani/todolist/issues"
+  },
+  "homepage": "https://github.com/dyazdani/todolist#readme",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
