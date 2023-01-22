@@ -40,6 +40,19 @@ describe("ToDoItem", () => {
         const toDoItem = new ToDoItem(title, description);
         expect(toDoItem.getDescription()).toBe(description);
     })
+    test("can set & get dueDate", () => {
+        const toDoItem = new ToDoItem();
+        const dueDate = "the due date";
+        toDoItem.setDueDate(dueDate);
+        expect(toDoItem.getDueDate()).toBe(dueDate);
+    })
+    test("constructor can set dueDate", () => {
+        const dueDate = "the due date";
+        const description = "a description";
+        const title = "a title";
+        const toDoItem = new ToDoItem(title, description, dueDate);
+        expect(toDoItem.getDueDate()).toBe(dueDate);
+    })
 
 
 
