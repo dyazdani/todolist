@@ -58,4 +58,9 @@ describe("ToDoItem", () => {
         toDoItem.markComplete();
         expect(toDoItem.complete).toBe(true);
     })
+    test("mark item incomplete", () => {
+        const toDoItem = new ToDoItem();    
+        toDoItem.markIncomplete();
+        expect(toDoItem.complete).toBe(false);
+    })
 });

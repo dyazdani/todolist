@@ -29,6 +29,9 @@ class ToDoItem {
     markComplete() {
         this.complete = true;
     }
+    markIncomplete() {
+        this.complete = false;
+    }
 }
 
 module.exports = {ToDoItem};
