@@ -26,6 +26,9 @@ class ToDoItem {
     getDueDate() {
       return this.#dueDate; 
     }
+    markComplete() {
+        this.complete = true;
+    }
 }
 
 module.exports = {ToDoItem};
