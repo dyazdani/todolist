@@ -54,10 +54,7 @@ describe("ToDoItem", () => {
         expect(toDoItem.getDueDate()).toBe(dueDate);
     })
     test("mark item complete", () => {
-        const dueDate = "the due date";
-        const description = "a description";
-        const title = "a title";
-        const toDoItem = new ToDoItem(title, description, dueDate);    
+        const toDoItem = new ToDoItem();    
         toDoItem.markComplete();
         expect(toDoItem.complete).toBe(true);
     })
