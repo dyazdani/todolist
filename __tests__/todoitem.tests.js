@@ -3,11 +3,11 @@ const {ToDoItem} = require("./../scripts/todoitem");
 
 /*	TODO: 
     ToDoItem Class Features
-    ◦	set name, description & optional due date in constructor
-	◦	mark item complete/incomplete
-	◦	get/set title
-	◦	get/set description
-	◦	get/set due date
+    √	set name, description & optional due date in constructor
+	√	mark item complete/incomplete
+	√	get/set title
+	√	get/set description
+	√	get/set due date
 	◦	check if the item is overdue
 	◦	check if the item is complete */
 
@@ -62,5 +62,12 @@ describe("ToDoItem", () => {
         const toDoItem = new ToDoItem();    
         toDoItem.markIncomplete();
         expect(toDoItem.complete).toBe(false);
+    })
+    test("check if item is complete", () => {
+        const toDoItem = new ToDoItem();    
+        toDoItem.markComplete();
+        expect(toDoItem.isComplete()).toBe(true);
+        toDoItem.markIncomplete();
+        expect(toDoItem.isComplete()).toBe(false);
     })
 });

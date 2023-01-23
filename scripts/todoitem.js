@@ -32,6 +32,9 @@ class ToDoItem {
     markIncomplete() {
         this.complete = false;
     }
+    isComplete() {
+        return this.complete;
+    }
 }
 
 module.exports = {ToDoItem};
