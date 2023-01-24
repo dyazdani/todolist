@@ -35,6 +35,16 @@ class ToDoItem {
     isComplete() {
         return this.complete;
     }
+    // create a new Date object 
+    isOverdue() {
+        let dueDateObject = new Date(this.#dueDate);
+        let dueDateInMili = dueDateObject.getTime();
+        if (dueDateInMili <= Date.now()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 module.exports = {ToDoItem};

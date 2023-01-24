@@ -8,8 +8,8 @@ const {ToDoItem} = require("./../scripts/todoitem");
 	√	get/set title
 	√	get/set description
 	√	get/set due date
-	◦	check if the item is overdue
-	◦	check if the item is complete */
+	√	check if the item is overdue
+	√	check if the item is complete */
 
 describe("ToDoItem", () => {
     test("constructor existence", () => {
@@ -69,5 +69,19 @@ describe("ToDoItem", () => {
         expect(toDoItem.isComplete()).toBe(true);
         toDoItem.markIncomplete();
         expect(toDoItem.isComplete()).toBe(false);
+    })
+    test("check if item is overdue when it is", () => {
+        const dueDate = "Jul 11, 2011";
+        const description = "a description";
+        const title = "a title";
+        const toDoItem = new ToDoItem(title, description, dueDate);    
+        expect(toDoItem.isOverdue()).toBe(true);
+    })
+    test("check if item is overdue when it is not", () => {
+        const dueDate = "Jul 11, 2031";
+        const description = "a description";
+        const title = "a title";
+        const toDoItem = new ToDoItem(title, description, dueDate);    
+        expect(toDoItem.isOverdue()).toBe(false);
     })
 });
