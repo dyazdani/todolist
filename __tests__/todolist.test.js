@@ -16,4 +16,10 @@ describe("ToDoList", () => {
         expect(toDoList).toBeDefined();
         expect(toDoList).toBeInstanceOf(ToDoList);
     })
+    test("can set & get title", () => {
+        const toDoList = new ToDoList();
+        const title = "the title";
+        toDoList.setTitle(title);
+        expect(toDoList.getTitle()).toBe(title);
+    })
 });
