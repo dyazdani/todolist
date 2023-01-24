@@ -1,6 +1,7 @@
 "use strict"
 class ToDoList {
     #title;
+    #owner;
     constructor() {
 
     }
@@ -9,6 +10,12 @@ class ToDoList {
     }
     getTitle() {
         return this.#title; 
+      }
+    setOwner(owner) {
+        this.#owner = owner;
+    }
+    getOwner() {
+        return this.#owner; 
       }
 }
 
