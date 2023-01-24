@@ -10,8 +10,10 @@ const {ToDoList} = require("./../scripts/todolist");
         • delete a Todo item
         • get list of incomplete todo items */
 
-        describe("", () => {
-            test("", () => {
-                
-            })
-        });
+describe("ToDoList", () => {
+    test("constructor existence", () => {
+        const toDoList = new ToDoList();
+        expect(toDoList).toBeDefined();
+        expect(toDoList).toBeInstanceOf(ToDoList);
+    })
+});
