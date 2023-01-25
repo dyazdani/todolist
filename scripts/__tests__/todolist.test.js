@@ -55,5 +55,27 @@ describe("ToDoList", () => {
     //     toDoList.deleteItem(Run);
     //     expect(toDoList.Run).toBe(undefined);
     // })
+    // test("get list of incomplete todo items", () => {
+    //     const toDoList = new ToDoList();
+    //     const title = "Paper";
+    //     const description = "Finish paper";
+    //     const dueDate = "Feb 01 2023";
+    //     const title2 = "Dog";
+    //     const description2 = "Feed Dog";
+    //     const dueDate2 = "Jan 26 2023";
+    //     const title3 = "Gutters";
+    //     const description3 = "Clean gutters";
+    //     const dueDate3 = "March 01 2023";
+    //     toDoList.addToDoItem(title, description, dueDate);
+    //     toDoList.addToDoItem(title2, description2, dueDate2);
+    //     toDoList.addToDoItem(title3, description3, dueDate3);
+        
+    //     toDoList.Dog.markComplete(true);
 
+    //     let incompleteList = [];
+    //     incompleteList.push(toDoList.Paper);
+    //     incompleteList.push(toDoList.Gutters);
+
+    //     expect(toDoList.getIncompleteItems()).toStrictEqual(incompleteList);
+    // })
 });

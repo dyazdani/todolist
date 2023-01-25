@@ -28,6 +28,14 @@ class ToDoList {
     //     delete this.title;
     //     }
     // }
+    // getIncompleteItems() {
+    //     let incompleteArray = [];
+    //     pseudocode from here down:
+    //     1. loop through ToDoList properties for those that have the #complete property.
+    //     2. If the value is false, push to incompleteArray.
+    //     3. return incompleteArray.
+
+    // }
 }
 
 
