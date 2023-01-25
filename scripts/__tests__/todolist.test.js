@@ -1,5 +1,6 @@
 "use strict";
 const {ToDoList} = require("../todolist");
+// const {ToDoItem} = require("../todoitem");
 
 /* TODO:
     Todo List Class
@@ -35,4 +36,9 @@ describe("ToDoList", () => {
         expect(toDoList.getTitle()).toBe(title);
         expect(toDoList.getOwner()).toBe(owner);
     })
+    // test("add todo item to todo list", () => {
+    //     const toDoList = new ToDoList();
+    //     expect(toDoList.addToDoItem()).toBeInstanceOf(ToDoItem);
+    //     expect(toDoList.toDo).toStrictEqual(toDoList.addToDoItem());
+    // })
 });
