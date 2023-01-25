@@ -43,23 +43,19 @@ describe("ToDoItem", () => {
         expect(toDoItem.getTitle()).toBe(title);
         expect(toDoItem.getDescription()).toBe(description);
         expect(toDoItem.getDueDate()).toBe(dueDate);
-
     })
-    test("mark item complete", () => {
+    test("mark item complete and incomplete", () => {
         const toDoItem = new ToDoItem();    
-        toDoItem.markComplete();
+        toDoItem.markComplete(true);
         expect(toDoItem.isComplete()).toBe(true);
-    })
-    test("mark item incomplete", () => {
-        const toDoItem = new ToDoItem();    
-        toDoItem.markIncomplete();
+        toDoItem.markComplete(false);
         expect(toDoItem.isComplete()).toBe(false);
     })
     test("check if item is complete", () => {
         const toDoItem = new ToDoItem();    
-        toDoItem.markComplete();
+        toDoItem.markComplete(true);
         expect(toDoItem.isComplete()).toBe(true);
-        toDoItem.markIncomplete();
+        toDoItem.markComplete(false);
         expect(toDoItem.isComplete()).toBe(false);
     })
     test("check if item is overdue when it is", () => {

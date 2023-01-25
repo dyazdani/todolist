@@ -8,6 +8,7 @@ class ToDoItem {
         this.#title = title;
         this.#description = description;
         this.#dueDate = dueDate;
+        this.#complete = false;
     }
     setTitle(title) {
         this.#title = title;
@@ -27,11 +28,8 @@ class ToDoItem {
     getDueDate() {
       return this.#dueDate; 
     }
-    markComplete() {
-        this.#complete = true;
-    }
-    markIncomplete() {
-        this.#complete = false;
+    markComplete(boolean) {
+        this.#complete = boolean;
     }
     isComplete() {
         return this.#complete;
