@@ -37,11 +37,7 @@ class ToDoItem {
     // create a new Date object 
     isOverdue() {
         let dueDateInMili = this.#dueDate.getTime();
-        if (dueDateInMili <= Date.now()) {
-            return true;
-        } else {
-            return false;
-        }
+        return dueDateInMili <= Date.now() 
     }
 }
 
