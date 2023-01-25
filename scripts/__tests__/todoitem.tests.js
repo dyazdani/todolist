@@ -48,12 +48,12 @@ describe("ToDoItem", () => {
     test("mark item complete", () => {
         const toDoItem = new ToDoItem();    
         toDoItem.markComplete();
-        expect(toDoItem.complete).toBe(true);
+        expect(toDoItem.isComplete()).toBe(true);
     })
     test("mark item incomplete", () => {
         const toDoItem = new ToDoItem();    
         toDoItem.markIncomplete();
-        expect(toDoItem.complete).toBe(false);
+        expect(toDoItem.isComplete()).toBe(false);
     })
     test("check if item is complete", () => {
         const toDoItem = new ToDoItem();    

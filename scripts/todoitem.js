@@ -3,6 +3,7 @@ class ToDoItem {
     #title;
     #description;
     #dueDate;
+    #complete
     constructor(title, description, dueDate) {
         this.#title = title;
         this.#description = description;
@@ -27,13 +28,13 @@ class ToDoItem {
       return this.#dueDate; 
     }
     markComplete() {
-        this.complete = true;
+        this.#complete = true;
     }
     markIncomplete() {
-        this.complete = false;
+        this.#complete = false;
     }
     isComplete() {
-        return this.complete;
+        return this.#complete;
     }
     // create a new Date object 
     isOverdue() {
