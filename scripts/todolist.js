@@ -2,8 +2,9 @@
 class ToDoList {
     #title;
     #owner;
-    constructor() {
-
+    constructor(title, owner) {
+        this.#title = title;
+        this.#owner = owner;
     }
     setTitle(title) {
         this.#title = title;

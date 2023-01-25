@@ -1,9 +1,9 @@
 "use strict";
-const {ToDoList} = require("./../scripts/todolist");
+const {ToDoList} = require("../todolist");
 
 /* TODO:
     Todo List Class
-        • set name and owner in constructor
+        √ set title and owner in constructor
         √ get/set title
         √ get/set owner
         • add Todo item
@@ -26,6 +26,17 @@ describe("ToDoList", () => {
         const toDoList = new ToDoList();
         const owner = "the owner";
         toDoList.setOwner(owner);
+        expect(toDoList.getOwner()).toBe(owner);
+    })
+    test("constructor can set title", () => {
+        const title = "the title";
+        const toDoList = new ToDoList(title);
+        expect(toDoList.getTitle()).toBe(title);
+    })
+    test("constructor can set owner", () => {
+        const owner = "the owner";
+        const title = "the title";
+        const toDoList = new ToDoList(title, owner);
         expect(toDoList.getOwner()).toBe(owner);
     })
 });
