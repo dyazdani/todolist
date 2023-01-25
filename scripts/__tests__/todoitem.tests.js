@@ -1,5 +1,5 @@
 "use strict";
-const {ToDoItem} = require("./../scripts/todoitem");
+const {ToDoItem} = require("../todoitem");
 
 /*	TODO: 
     ToDoItem Class Features
@@ -23,21 +23,10 @@ describe("ToDoItem", () => {
         toDoItem.setTitle(title);
         expect(toDoItem.getTitle()).toBe(title);
     })
-    test("constructor can set title", () => {
-        const title = "a title";
-        const toDoItem = new ToDoItem(title);
-        expect(toDoItem.getTitle()).toBe(title);
-    })
     test("can set & get description", () => {
         const toDoItem = new ToDoItem();
         const description = "a description";
         toDoItem.setDescription(description);
-        expect(toDoItem.getDescription()).toBe(description);
-    })
-    test("constructor can set description", () => {
-        const description = "a description";
-        const title = "a title";
-        const toDoItem = new ToDoItem(title, description);
         expect(toDoItem.getDescription()).toBe(description);
     })
     test("can set & get dueDate", () => {
@@ -46,12 +35,15 @@ describe("ToDoItem", () => {
         toDoItem.setDueDate(dueDate);
         expect(toDoItem.getDueDate()).toBe(dueDate);
     })
-    test("constructor can set dueDate", () => {
+    test("constructor can set title, description, dueDate", () => {
         const dueDate = "the due date";
         const description = "a description";
         const title = "a title";
         const toDoItem = new ToDoItem(title, description, dueDate);
+        expect(toDoItem.getTitle()).toBe(title);
+        expect(toDoItem.getDescription()).toBe(description);
         expect(toDoItem.getDueDate()).toBe(dueDate);
+
     })
     test("mark item complete", () => {
         const toDoItem = new ToDoItem();    

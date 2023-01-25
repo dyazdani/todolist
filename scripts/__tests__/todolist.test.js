@@ -28,15 +28,11 @@ describe("ToDoList", () => {
         toDoList.setOwner(owner);
         expect(toDoList.getOwner()).toBe(owner);
     })
-    test("constructor can set title", () => {
-        const title = "the title";
-        const toDoList = new ToDoList(title);
-        expect(toDoList.getTitle()).toBe(title);
-    })
-    test("constructor can set owner", () => {
+    test("constructor can set title, owner", () => {
         const owner = "the owner";
         const title = "the title";
         const toDoList = new ToDoList(title, owner);
+        expect(toDoList.getTitle()).toBe(title);
         expect(toDoList.getOwner()).toBe(owner);
     })
 });
