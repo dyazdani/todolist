@@ -38,7 +38,12 @@ describe("ToDoList", () => {
     })
     // test("add todo item to todo list", () => {
     //     const toDoList = new ToDoList();
-    //     expect(toDoList.addToDoItem()).toBeInstanceOf(ToDoItem);
-    //     expect(toDoList.toDo).toStrictEqual(toDoList.addToDoItem());
+    //     const title = "Shower";
+    //     const description = "Take a shower";
+    //     const dueDate = "Jan 24 2023";
+    //     toDoList.addToDoItem(title, description, dueDate);
+    //     expect(toDoList.Shower).toBeInstanceOf(ToDoItem);
+    //     expect(toDoList.addToDoItem(title, description, dueDate)).toStrictEqual(toDoList.Shower);
     // })
+   
 });
