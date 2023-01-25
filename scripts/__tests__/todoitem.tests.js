@@ -31,18 +31,18 @@ describe("ToDoItem", () => {
     })
     test("can set & get dueDate", () => {
         const toDoItem = new ToDoItem();
-        const dueDate = "the due date";
+        const dueDate = "Dec 03 1987";
         toDoItem.setDueDate(dueDate);
-        expect(toDoItem.getDueDate()).toBe(dueDate);
+        expect(toDoItem.getDueDate()).toStrictEqual(new Date("Dec 03 1987"));
     })
     test("constructor can set title, description, dueDate", () => {
-        const dueDate = "the due date";
+        const dueDate = "June 15 1990";
         const description = "a description";
         const title = "a title";
         const toDoItem = new ToDoItem(title, description, dueDate);
         expect(toDoItem.getTitle()).toBe(title);
         expect(toDoItem.getDescription()).toBe(description);
-        expect(toDoItem.getDueDate()).toBe(dueDate);
+        expect(toDoItem.getDueDate()).toStrictEqual(new Date("June 15 1990"));
     })
     test("mark item complete and incomplete", () => {
         const toDoItem = new ToDoItem();    
@@ -59,14 +59,14 @@ describe("ToDoItem", () => {
         expect(toDoItem.isComplete()).toBe(false);
     })
     test("check if item is overdue when it is", () => {
-        const dueDate = "Jul 11, 2011";
+        const dueDate = "July 11 2011";
         const description = "a description";
         const title = "a title";
         const toDoItem = new ToDoItem(title, description, dueDate);    
         expect(toDoItem.isOverdue()).toBe(true);
     })
     test("check if item is overdue when it is not", () => {
-        const dueDate = "Jul 11, 2031";
+        const dueDate = "July 11 2031";
         const description = "a description";
         const title = "a title";
         const toDoItem = new ToDoItem(title, description, dueDate);    

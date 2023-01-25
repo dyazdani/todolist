@@ -7,7 +7,7 @@ class ToDoItem {
     constructor(title, description, dueDate) {
         this.#title = title;
         this.#description = description;
-        this.#dueDate = dueDate;
+        this.#dueDate = new Date(dueDate);
         this.#complete = false;
     }
     setTitle(title) {
@@ -23,7 +23,7 @@ class ToDoItem {
       return this.#description; 
     }
     setDueDate(dueDate) {
-        this.#dueDate = dueDate;
+        this.#dueDate = new Date(dueDate);
     }
     getDueDate() {
       return this.#dueDate; 
@@ -36,8 +36,7 @@ class ToDoItem {
     }
     // create a new Date object 
     isOverdue() {
-        let dueDateObject = new Date(this.#dueDate);
-        let dueDateInMili = dueDateObject.getTime();
+        let dueDateInMili = this.#dueDate.getTime();
         if (dueDateInMili <= Date.now()) {
             return true;
         } else {
