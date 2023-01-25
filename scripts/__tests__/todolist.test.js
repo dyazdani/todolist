@@ -45,5 +45,15 @@ describe("ToDoList", () => {
     //     expect(toDoList.Shower).toBeInstanceOf(ToDoItem);
     //     expect(toDoList.addToDoItem(title, description, dueDate)).toStrictEqual(toDoList.Shower);
     // })
-   
+    // test("delete a todo item", () => {
+    //     const toDoList = new ToDoList();
+    //     const title = "Run";
+    //     const description = "Go for a run";
+    //     const dueDate = "Jan 31 2023";
+    //     toDoList.addToDoItem(title, description, dueDate);
+    //     expect(toDoList.addToDoItem(title, description, dueDate)).toStrictEqual(toDoList.Run);
+    //     toDoList.deleteItem(Run);
+    //     expect(toDoList.Run).toBe(undefined);
+    // })
+
 });

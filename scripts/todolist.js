@@ -23,7 +23,11 @@ class ToDoList {
     // addToDoItem(title, description, dueDate) {
     //     this.title = new ToDoItem(title, description, dueDate);
     // }
-
+    // deleteItem(title) {
+    //     if (this.title instanceof ToDoItem) { 
+    //     delete this.title;
+    //     }
+    // }
 }
 
 
