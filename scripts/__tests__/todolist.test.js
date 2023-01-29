@@ -12,30 +12,35 @@ const {ToDoItem} = require('../todoitem.js');
         • get list of incomplete todo items */
 
 describe("ToDoList", () => {
+    describe("constructor", () => {
     test("constructor existence", () => {
         const toDoList = new ToDoList();
         expect(toDoList).toBeDefined();
         expect(toDoList).toBeInstanceOf(ToDoList);
-    })
-    test("can set & get title", () => {
-        const toDoList = new ToDoList();
-        const listTitle = "the list title";
-        toDoList.setListTitle(listTitle);
-        expect(toDoList.getListTitle()).toBe(listTitle);
-    })
-    test("can set & get owner", () => {
-        const toDoList = new ToDoList();
-        const owner = "the owner";
-        toDoList.setOwner(owner);
-        expect(toDoList.getOwner()).toBe(owner);
-    })
+    });
     test("constructor can set list title, owner", () => {
         const owner = "the owner";
         const listTitle = "the list title";
         const toDoList = new ToDoList(listTitle, owner);
         expect(toDoList.getListTitle()).toBe(listTitle);
         expect(toDoList.getOwner()).toBe(owner);
-    })
+    });
+});
+
+    test("can set & get title", () => {
+        const toDoList = new ToDoList();
+        const listTitle = "the list title";
+        toDoList.setListTitle(listTitle);
+        expect(toDoList.getListTitle()).toBe(listTitle);
+    });
+
+    test("can set & get owner", () => {
+        const toDoList = new ToDoList();
+        const owner = "the owner";
+        toDoList.setOwner(owner);
+        expect(toDoList.getOwner()).toBe(owner);
+    });
+
     test("add todo item to todo list", () => {
         const toDoList = new ToDoList();
         const title = "Shower";
@@ -47,7 +52,8 @@ describe("ToDoList", () => {
         expect(toDoList.toDoItems[0].getTitle()).toBe(title);
         expect(toDoList.toDoItems[0].getDescription()).toBe(description);
         expect(toDoList.toDoItems[0].getDueDate()).toStrictEqual(new Date("Jan 24 2023"));
-    })
+    });
+
     // test("delete a todo item", () => {
     //     const toDoList = new ToDoList();
     //     const title = "Run";
@@ -57,7 +63,8 @@ describe("ToDoList", () => {
     //     expect(toDoList.addToDoItem(title, description, dueDate)).toStrictEqual(toDoList.Run);
     //     toDoList.deleteItem(Run);
     //     expect(toDoList.Run).toBe(undefined);
-    // })
+    // });
+    
     test("get list of incomplete todo items", () => {
         const toDoList = new ToDoList();
 
@@ -81,5 +88,5 @@ describe("ToDoList", () => {
         toDoList.addToDoItem(item3);
 
         expect(toDoList.getIncompleteItems()).toStrictEqual[(item2)];
-    })
+    });
 });
