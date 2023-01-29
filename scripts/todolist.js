@@ -1,18 +1,19 @@
 "use strict"
-// import {ToDoItem} from './todoitem.js';
+const {ToDoItem} = require('./todoitem.js');
 
 class ToDoList {
-    #title;
+    #listTitle;
     #owner;
-    constructor(title, owner) {
-        this.#title = title;
+    constructor(listTitle, owner) {
+        this.#listTitle = listTitle;
         this.#owner = owner;
+        this.toDoItems = [];
     }
-    setTitle(title) {
-        this.#title = title;
+    setListTitle(listTitle) {
+        this.#listTitle = listTitle;
     }
-    getTitle() {
-        return this.#title; 
+    getListTitle() {
+        return this.#listTitle; 
       }
     setOwner(owner) {
         this.#owner = owner;
@@ -20,9 +21,12 @@ class ToDoList {
     getOwner() {
         return this.#owner; 
       }
-    // addToDoItem(title, description, dueDate) {
-    //     this.title = new ToDoItem(title, description, dueDate);
-    // }
+    addToDoItem(title, description, dueDate) {
+        const item = new ToDoItem(title, description, dueDate);
+        console.log(item);
+        this.toDoItems.push(item);
+        console.log(this.toDoItems);
+    }
     // deleteItem(title) {
     //     if (this.title instanceof ToDoItem) { 
     //     delete this.title;

@@ -41,6 +41,5 @@ class ToDoItem {
     }
 }
 
-// export {ToDoItem};
 
 module.exports = {ToDoItem};

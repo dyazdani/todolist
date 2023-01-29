@@ -1,6 +1,6 @@
 "use strict";
-const {ToDoList} = require("../todolist");
-// const {ToDoItem} = require("../todoitem");
+const {ToDoList} = require("../todolist.js");
+const {ToDoItem} = require('../todoitem.js');
 
 /* TODO:
     Todo List Class
@@ -19,9 +19,9 @@ describe("ToDoList", () => {
     })
     test("can set & get title", () => {
         const toDoList = new ToDoList();
-        const title = "the title";
-        toDoList.setTitle(title);
-        expect(toDoList.getTitle()).toBe(title);
+        const listTitle = "the list title";
+        toDoList.setListTitle(listTitle);
+        expect(toDoList.getListTitle()).toBe(listTitle);
     })
     test("can set & get owner", () => {
         const toDoList = new ToDoList();
@@ -29,22 +29,24 @@ describe("ToDoList", () => {
         toDoList.setOwner(owner);
         expect(toDoList.getOwner()).toBe(owner);
     })
-    test("constructor can set title, owner", () => {
+    test("constructor can set list title, owner", () => {
         const owner = "the owner";
-        const title = "the title";
-        const toDoList = new ToDoList(title, owner);
-        expect(toDoList.getTitle()).toBe(title);
+        const listTitle = "the list title";
+        const toDoList = new ToDoList(listTitle, owner);
+        expect(toDoList.getListTitle()).toBe(listTitle);
         expect(toDoList.getOwner()).toBe(owner);
     })
-    // test("add todo item to todo list", () => {
-    //     const toDoList = new ToDoList();
-    //     const title = "Shower";
-    //     const description = "Take a shower";
-    //     const dueDate = "Jan 24 2023";
-    //     toDoList.addToDoItem(title, description, dueDate);
-    //     expect(toDoList.Shower).toBeInstanceOf(ToDoItem);
-    //     expect(toDoList.addToDoItem(title, description, dueDate)).toStrictEqual(toDoList.Shower);
-    // })
+    test("add todo item to todo list", () => {
+        const toDoList = new ToDoList();
+        const title = "Shower";
+        const description = "Take a shower";
+        const dueDate = "Jan 24 2023";
+        toDoList.addToDoItem(title, description, dueDate);
+        expect(toDoList.toDoItems[0]).toBeInstanceOf(ToDoItem);
+        expect(toDoList.toDoItems[0].getTitle()).toBe(title);
+        expect(toDoList.toDoItems[0].getDescription()).toBe(description);
+        expect(toDoList.toDoItems[0].getDueDate()).toStrictEqual(new Date("Jan 24 2023"));
+    })
     // test("delete a todo item", () => {
     //     const toDoList = new ToDoList();
     //     const title = "Run";
