@@ -21,11 +21,8 @@ class ToDoList {
     getOwner() {
         return this.#owner; 
       }
-    addToDoItem(title, description, dueDate) {
-        const item = new ToDoItem(title, description, dueDate);
-        console.log(item);
+    addToDoItem(item) {
         this.toDoItems.push(item);
-        console.log(this.toDoItems);
     }
     // deleteItem(title) {
     //     if (this.title instanceof ToDoItem) { 

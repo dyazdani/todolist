@@ -40,8 +40,9 @@ describe("ToDoList", () => {
         const toDoList = new ToDoList();
         const title = "Shower";
         const description = "Take a shower";
-        const dueDate = "Jan 24 2023";
-        toDoList.addToDoItem(title, description, dueDate);
+        const dueDate = new Date("Jan 24 2023");
+        const item = new ToDoItem(title, description, dueDate);
+        toDoList.addToDoItem(item);
         expect(toDoList.toDoItems[0]).toBeInstanceOf(ToDoItem);
         expect(toDoList.toDoItems[0].getTitle()).toBe(title);
         expect(toDoList.toDoItems[0].getDescription()).toBe(description);
