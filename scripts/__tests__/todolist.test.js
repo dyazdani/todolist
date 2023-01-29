@@ -58,7 +58,7 @@ describe("ToDoList", () => {
     //     toDoList.deleteItem(Run);
     //     expect(toDoList.Run).toBe(undefined);
     // })
-    test.only("get list of incomplete todo items", () => {
+    test("get list of incomplete todo items", () => {
         const toDoList = new ToDoList();
 
         const title1 = "Paper";
