@@ -58,27 +58,28 @@ describe("ToDoList", () => {
     //     toDoList.deleteItem(Run);
     //     expect(toDoList.Run).toBe(undefined);
     // })
-    // test("get list of incomplete todo items", () => {
-    //     const toDoList = new ToDoList();
-    //     const title = "Paper";
-    //     const description = "Finish paper";
-    //     const dueDate = "Feb 01 2023";
-    //     const title2 = "Dog";
-    //     const description2 = "Feed Dog";
-    //     const dueDate2 = "Jan 26 2023";
-    //     const title3 = "Gutters";
-    //     const description3 = "Clean gutters";
-    //     const dueDate3 = "March 01 2023";
-    //     toDoList.addToDoItem(title, description, dueDate);
-    //     toDoList.addToDoItem(title2, description2, dueDate2);
-    //     toDoList.addToDoItem(title3, description3, dueDate3);
-        
-    //     toDoList.Dog.markComplete(true);
+    test.only("get list of incomplete todo items", () => {
+        const toDoList = new ToDoList();
 
-    //     let incompleteList = [];
-    //     incompleteList.push(toDoList.Paper);
-    //     incompleteList.push(toDoList.Gutters);
+        const title1 = "Paper";
+        const description1 = "Finish paper";
+        const dueDate1 = new Date("Feb 01 2023");
+        const item1 = new ToDoItem(title1, description1, dueDate1);
+        toDoList.addToDoItem(item1);
 
-    //     expect(toDoList.getIncompleteItems()).toStrictEqual(incompleteList);
-    // })
+        const title2 = "Dog";
+        const description2 = "Feed Dog";
+        const dueDate2 = new Date("Jan 26 2023");
+        const item2 = new ToDoItem(title2, description2, dueDate2);
+        item2.markComplete(true);
+        toDoList.addToDoItem(item2);
+
+        const title3 = "Gutters";
+        const description3 = "Clean gutters";
+        const dueDate3 = new Date("March 01 2023");
+        const item3 = new ToDoItem(title3, description3, dueDate3);
+        toDoList.addToDoItem(item3);
+
+        expect(toDoList.getIncompleteItems()).toStrictEqual[(item2)];
+    })
 });

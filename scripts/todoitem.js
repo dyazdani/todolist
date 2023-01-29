@@ -34,7 +34,6 @@ class ToDoItem {
     isComplete() {
         return this.#complete;
     }
-    // create a new Date object 
     isOverdue() {
         let dueDateInMili = this.#dueDate.getTime();
         return dueDateInMili <= Date.now() 
