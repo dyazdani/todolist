@@ -54,17 +54,26 @@ describe("ToDoList", () => {
         expect(toDoList.toDoItems[0].getDueDate()).toStrictEqual(new Date("Jan 24 2023"));
     });
 
-    // test("delete a todo item", () => {
-    //     const toDoList = new ToDoList();
-    //     const title = "Run";
-    //     const description = "Go for a run";
-    //     const dueDate = "Jan 31 2023";
-    //     toDoList.addToDoItem(title, description, dueDate);
-    //     expect(toDoList.addToDoItem(title, description, dueDate)).toStrictEqual(toDoList.Run);
-    //     toDoList.deleteItem(Run);
-    //     expect(toDoList.Run).toBe(undefined);
-    // });
-    
+    test("delete a todo item", () => {
+        const toDoList = new ToDoList();
+
+        const title1 = "Run";
+        const description1 = "Go for a run";
+        const dueDate1 = new Date("Jan 31 2023");
+        const item1 = new ToDoItem(title1, description1, dueDate1);
+        toDoList.addToDoItem(item1);
+
+        const title2 = "Walk";
+        const description2 = "Go for a walk";
+        const dueDate2 = new Date("Jan 30 2023");
+        const item2 = new ToDoItem(title2, description2, dueDate2);
+        toDoList.addToDoItem(item2);
+
+        expect(toDoList.toDoItems).toStrictEqual([item1, item2]);
+        toDoList.deleteItem(item1);
+        expect(toDoList.toDoItems).toStrictEqual([item2]);
+    });
+
     test("get list of incomplete todo items", () => {
         const toDoList = new ToDoList();
 

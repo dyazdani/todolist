@@ -24,11 +24,9 @@ class ToDoList {
     addToDoItem(item) {
         this.toDoItems.push(item);
     }
-    // deleteItem(title) {
-    //     if (this.title instanceof ToDoItem) { 
-    //     delete this.title;
-    //     }
-    // }
+    deleteItem(targetItem) {
+        this.toDoItems = this.toDoItems.filter(item => item !== targetItem);
+    }
     getIncompleteItems() {
         return this.toDoItems.filter(item => item.isOverdue());
     }
