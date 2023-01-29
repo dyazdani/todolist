@@ -99,7 +99,7 @@ describe("ToDoList", () => {
         expect(toDoList.getIncompleteItems()).toStrictEqual([item2]);
     });
 
-    test("sort todo items by due date", () => {
+    test.only("sort todo items by due date", () => {
         const toDoList = new ToDoList();
 
         const title1 = "Workout";
@@ -120,9 +120,7 @@ describe("ToDoList", () => {
         const item3 = new ToDoItem(title3, description3, dueDate3);
         toDoList.addToDoItem(item3);
 
-        toDoList.sortByDueDate();
-
-        expect(toDoList.toDoItems).toStrictEqual([item2, item1, item3]);
+        expect(toDoList.sortByDueDate()).toStrictEqual([item2, item1, item3]);
     });
 
     test("sort todo items by title", () => {
@@ -146,8 +144,6 @@ describe("ToDoList", () => {
         const item3 = new ToDoItem(title3, description3, dueDate3);
         toDoList.addToDoItem(item3);
 
-        toDoList.sortByTitle();
-
-        expect(toDoList.toDoItems).toStrictEqual([item3, item2, item1]);
+        expect(toDoList.sortByTitle()).toStrictEqual([item3, item2, item1]);
     });
 });

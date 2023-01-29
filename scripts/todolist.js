@@ -40,7 +40,8 @@ class ToDoList {
     }
 
     sortByDueDate() {
-        this.toDoItems.sort(function(a, b) {
+        const newToDoItems = this.toDoItems.slice();
+        newToDoItems.sort(function(a, b) {
             const dateA = a.getDueDate();
             const miliDateA = dateA.getTime();
             const dateB = b.getDueDate();
@@ -56,10 +57,12 @@ class ToDoList {
 
             return 0;
         });
+        return newToDoItems;
     }
 
     sortByTitle() {
-        this.toDoItems.sort(function(a, b) {
+        const newToDoItems = this.toDoItems.slice();
+        newToDoItems.sort(function(a, b) {
             const titleA = a.getTitle();
             const lowerCaseTitleA = titleA.toLowerCase();
             const titleB = b.getTitle();
@@ -75,6 +78,7 @@ class ToDoList {
 
             return 0;
         });
+        return newToDoItems;
     }
 }
 
