@@ -7,7 +7,7 @@ class ToDoItem {
     constructor(title, description, dueDate) {
         this.#title = title;
         this.#description = description;
-        this.#dueDate = new Date(dueDate);
+        this.#dueDate = dueDate;
         this.#complete = false;
     }
     setTitle(title) {
@@ -23,7 +23,7 @@ class ToDoItem {
       return this.#description; 
     }
     setDueDate(dueDate) {
-        this.#dueDate = new Date(dueDate);
+        this.#dueDate = dueDate;
     }
     getDueDate() {
       return this.#dueDate; 
