@@ -30,6 +30,24 @@ class ToDoList {
     getIncompleteItems() {
         return this.toDoItems.filter(item => item.isOverdue());
     }
+    sortByDueDate() {
+        this.toDoItems.sort(function(a, b) {
+            const dateA = a.getDueDate();
+            const miliDateA = dateA.getTime();
+            const dateB = b.getDueDate();
+            const miliDateB = dateB.getTime();
+
+            if (miliDateA > miliDateB) {
+                return 1;
+            }
+
+            if (miliDateA < miliDateB) {
+                return -1;
+            }
+
+            return 0;
+        });
+    }
 }
 
 
