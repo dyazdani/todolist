@@ -36,7 +36,7 @@ class ToDoList {
     }
 
     getIncompleteItems() {
-        return this.toDoItems.filter(item => item.isOverdue());
+        return this.toDoItems.filter(item => !item.isComplete());
     }
 
     sortByDueDate() {
