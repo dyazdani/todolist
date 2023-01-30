@@ -40,8 +40,7 @@ class ToDoList {
     }
 
     sortByDueDate() {
-        const newToDoItems = this.toDoItems.slice();
-        newToDoItems.sort(function(a, b) {
+        return this.toDoItems.slice().sort(function(a, b) {
             const dateA = a.getDueDate().getTime();
             const dateB = b.getDueDate().getTime();
 
@@ -55,7 +54,6 @@ class ToDoList {
 
             return 0;
         });
-        return newToDoItems;
     }
 
     sortByTitle() {
