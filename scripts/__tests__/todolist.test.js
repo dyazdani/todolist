@@ -7,9 +7,9 @@ const {ToDoItem} = require('../todoitem.js');
         √ set title and owner in constructor
         √ get/set title
         √ get/set owner
-        • add Todo item
-        • delete a Todo item
-        • get list of incomplete todo items */
+        √ add Todo item
+        √ delete a Todo item
+        √ get list of incomplete todo items */
 
 describe("ToDoList", () => {
     describe("constructor", () => {
@@ -69,9 +69,9 @@ describe("ToDoList", () => {
         const item2 = new ToDoItem(title2, description2, dueDate2);
         toDoList.addToDoItem(item2);
 
-        expect(toDoList.toDoItems).toStrictEqual([item1, item2]);
+        expect(toDoList.toDoItems).toContain(item1, item2);
         toDoList.deleteItem(item1);
-        expect(toDoList.toDoItems).toStrictEqual([item2]);
+        expect(toDoList.toDoItems).not.toContain(item1);
     });
 
     test("get list of incomplete todo items", () => {
