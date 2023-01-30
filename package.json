@@ -16,7 +16,7 @@
     "url": "https://github.com/dyazdani/todolist/issues"
   },
   "homepage": "https://github.com/dyazdani/todolist#readme",
-  "dependencies": {
+  "devDependencies": {
     "jest": "^29.3.1"
   }
 }
