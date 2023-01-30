@@ -105,19 +105,19 @@ describe("ToDoList", () => {
 
         const title1 = "Workout";
         const description1 = "Workout at gym";
-        const dueDate1 = new Date("Feb 11 2023");
+        const dueDate1 = new Date("Feb 11 2024");
         const secondItem = new ToDoItem(title1, description1, dueDate1);
         toDoList.addToDoItem(secondItem);
 
         const title2 = "Cat";
         const description2 = "Feed cat";
-        const dueDate2 = new Date("Jan 31 2023");
+        const dueDate2 = new Date("Jan 31 2024");
         const firstItem = new ToDoItem(title2, description2, dueDate2);
         toDoList.addToDoItem(firstItem);
 
         const title3 = "Lawn";
         const description3 = "Mow Lawn";
-        const dueDate3 = new Date("March 01 2023");
+        const dueDate3 = new Date("March 01 2024");
         const thirdItem = new ToDoItem(title3, description3, dueDate3);
         toDoList.addToDoItem(thirdItem);
 
