@@ -129,21 +129,21 @@ describe("ToDoList", () => {
         const title1 = "Soccer";
         const description1 = "Play soccer";
         const dueDate1 = new Date("Feb 14 2023");
-        const item1 = new ToDoItem(title1, description1, dueDate1);
-        toDoList.addToDoItem(item1);
+        const thirdItem = new ToDoItem(title1, description1, dueDate1);
+        toDoList.addToDoItem(thirdItem);
 
         const title2 = "Basketball";
         const description2 = "Play basketball";
         const dueDate2 = new Date("May 31 2023");
-        const item2 = new ToDoItem(title2, description2, dueDate2);
-        toDoList.addToDoItem(item2);
+        const secondItem = new ToDoItem(title2, description2, dueDate2);
+        toDoList.addToDoItem(secondItem);
 
         const title3 = "Archery";
         const description3 = "Do some archery";
         const dueDate3 = new Date("June 01 2023");
-        const item3 = new ToDoItem(title3, description3, dueDate3);
-        toDoList.addToDoItem(item3);
+        const firstItem = new ToDoItem(title3, description3, dueDate3);
+        toDoList.addToDoItem(firstItem);
 
-        expect(toDoList.sortByTitle()).toStrictEqual([item3, item2, item1]);
+        expect(toDoList.sortByTitle()).toStrictEqual([firstItem, secondItem, thirdItem]);
     });
 });
