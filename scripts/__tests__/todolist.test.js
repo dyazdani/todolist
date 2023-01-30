@@ -100,7 +100,7 @@ describe("ToDoList", () => {
         expect(toDoList.getIncompleteItems().every(item => !item.isComplete())).toStrictEqual(true);
     });
 
-    test.only("sort todo items by due date", () => {
+    test("sort todo items by due date", () => {
         const toDoList = new ToDoList();
 
         const title1 = "Workout";

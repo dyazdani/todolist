@@ -61,10 +61,8 @@ class ToDoList {
     sortByTitle() {
         const newToDoItems = this.toDoItems.slice();
         newToDoItems.sort(function(a, b) {
-            const titleA = a.getTitle();
-            const lowerCaseTitleA = titleA.toLowerCase();
-            const titleB = b.getTitle();
-            const lowerCaseTitleB = titleB.toLowerCase();
+            const titleA = a.getTitle().toLowerCase();
+            const titleB = b.getTitle().toLowerCase();
 
             if (titleA < titleB) {
                 return -1;
