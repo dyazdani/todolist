@@ -48,13 +48,13 @@ describe("ToDoList", () => {
         const dueDate = new Date("Jan 24 2023");
         const item = new ToDoItem(title, description, dueDate);
         toDoList.addToDoItem(item);
-        expect(toDoList.toDoItems[0]).toBeInstanceOf(ToDoItem);
+        expect(toDoList.toDoItems[0]).toStrictEqual(item);
         expect(toDoList.toDoItems[0].getTitle()).toBe(title);
         expect(toDoList.toDoItems[0].getDescription()).toBe(description);
         expect(toDoList.toDoItems[0].getDueDate()).toStrictEqual(new Date("Jan 24 2023"));
     });
 
-    test.only("delete a todo item", () => {
+    test("delete a todo item", () => {
         const toDoList = new ToDoList();
 
         const title1 = "Run";
@@ -99,7 +99,7 @@ describe("ToDoList", () => {
         expect(toDoList.getIncompleteItems()).toStrictEqual([item2]);
     });
 
-    test.only("sort todo items by due date", () => {
+    test("sort todo items by due date", () => {
         const toDoList = new ToDoList();
 
         const title1 = "Workout";
