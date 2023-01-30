@@ -42,16 +42,14 @@ class ToDoList {
     sortByDueDate() {
         const newToDoItems = this.toDoItems.slice();
         newToDoItems.sort(function(a, b) {
-            const dateA = a.getDueDate();
-            const miliDateA = dateA.getTime();
-            const dateB = b.getDueDate();
-            const miliDateB = dateB.getTime();
+            const dateA = a.getDueDate().getTime();
+            const dateB = b.getDueDate().getTime();
 
-            if (miliDateA > miliDateB) {
+            if (dateA > dateB) {
                 return 1;
             }
 
-            if (miliDateA < miliDateB) {
+            if (dateA < dateB) {
                 return -1;
             }
 
